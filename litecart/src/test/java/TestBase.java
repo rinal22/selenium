@@ -2,6 +2,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
@@ -15,10 +16,11 @@ public class TestBase {
   private WebDriverWait wait;
   @Before
   public void start() {
-    //driver = new ChromeDriver();
+    driver = new ChromeDriver();
     //System.setProperty("webdriver.gecko.driver","C:/Tools/geckodriver.exe");
-    driver = new FirefoxDriver();
-    //driver = new InternetExplorerDriver();
+    //System.setProperty("webdriver.firefox.bin","C:/Program Files/Mozilla Firefox/firefox.exe");
+    //driver = new FirefoxDriver();
+    //driver = new EdgeDriver();
     wait = new WebDriverWait(driver, Duration.ofSeconds(10));
   }
 
